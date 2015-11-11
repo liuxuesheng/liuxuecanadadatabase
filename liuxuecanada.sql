@@ -2,8 +2,8 @@
 -- version 4.5.0.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 10, 2015 at 06:47 PM
+-- Host: localhost
+-- Generation Time: Nov 11, 2015 at 06:45 PM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
