@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 04, 2015 at 10:22 PM
+-- Generation Time: Dec 04, 2015 at 10:47 PM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -1615,8 +1615,8 @@ INSERT INTO `news_university` (`id`, `news_date`, `news_title`, `news_subtitle`,
 CREATE TABLE `news_visa` (
   `id` int(7) NOT NULL,
   `news_date` date NOT NULL,
-  `english_name` varchar(80) CHARACTER SET utf8 NOT NULL,
-  `if_univisity` varchar(80) CHARACTER SET utf8 NOT NULL,
+  `news_title` varchar(80) CHARACTER SET utf8 NOT NULL,
+  `news_subtitle` varchar(80) CHARACTER SET utf8 NOT NULL,
   `news_content` text CHARACTER SET utf8 NOT NULL,
   `news_imageURL` varchar(80) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1625,7 +1625,7 @@ CREATE TABLE `news_visa` (
 -- Dumping data for table `news_visa`
 --
 
-INSERT INTO `news_visa` (`id`, `news_date`, `english_name`, `if_univisity`, `news_content`, `news_imageURL`) VALUES
+INSERT INTO `news_visa` (`id`, `news_date`, `news_title`, `news_subtitle`, `news_content`, `news_imageURL`) VALUES
 (1000001, '2015-11-28', '加拿大留学大签？小签？傻傻分不清楚？分分钟让你秒懂！', '加拿大留学中心', '对于想去加拿大的学生来说，加拿大的大签和小签是必定要了解的。近来发现很多学生及家长对这个大小签有种种的误解，下面我们就来具体看下，加拿大留学用到的大小签有哪些区别。\r\n\r\n大签（Study Permit）\r\n学生在入境加拿大时移民局(或海关)所发的学习许可“Study Permit”, 就是我们俗称的加拿大 大签。学生在第一次入境时，机场会有专门提供换取study permit的移民局办公室，处理的人员是移民局的移民官。Study permit是一张绿色纸质文件，A4大小，会被订在学生的护照上，以防丢失。它是学生在加拿大读书的凭证，具有法律效益，学生一定要妥善保管，大签到期都必须及时续签。注意：这个许可证只是允许学生居留加拿大上学读书，证明学生在加拿大的合法学生身份，但是不能作为持有者出入加拿大国境的凭证。此学习许可由加拿大境内移民局发放。学习许可的有效期通常为1年，这里一定注意到期要在当地移民局申请延期。一般情况下，申请人如果能顺利完成第一年课程，可以申请将学习许可的有效期延长至学习结束期满。\r\nPS：因大签是有一定有效期的，如果大签到期未续签且情况严重者，一般不能超过3个月再续签，否则会被移民局视为非法滞留，导致续签拒签。续签Study Permit 申请必须在Visa有效期内提交申请。\r\n\r\n小签（Student Visa）\r\n小签是指Student Visa，这个是申请人护照上所贴的VISA（贴在护照上的一张亮面的塑料卡）、是学生出入境的凭证，所以一般也称为出入境凭证。由加拿大驻各地领事馆发放。如果申请人是探亲、度假等原因，申请人必须事先向移民局申请延签 “出入境签证”，否则可能会遇到回国后无法再入境加拿大的情况。如果申请人临时离境，也必须申请再入境签证，否则不予重返加拿大。 同学们一定要注意自己大小签的期限，不要因为大小签续签的问题耽误自己在加拿大留学的时间。对于续签来说，这与学生本身在学校的学习成绩和日常的出勤率有很大的关系。这就要求学生一定要保证学习成绩和日常出勤。\r\n\r\n最后，给亲爱的同学们几个网站，以便快速了解加拿大留学签证的一些动态。\r\n加拿大移民局官网：\r\nhttp://www.cic.gc.ca/english/index.asp\r\n加拿大签证中心官网：\r\nhttp://www.canadainternational.gc.ca/china-chine/index.aspx?lang=eng\r\n续签：\r\nhttp://www.cic.gc.ca/english/study/study-extend.asp', 'news_visa_image_1.png');
 
 -- --------------------------------------------------------
