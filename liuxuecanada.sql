@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.0.2
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 08, 2015 at 04:46 PM
--- Server version: 10.0.17-MariaDB
--- PHP Version: 5.6.14
+-- Generation Time: Dec 08, 2015 at 11:58 PM
+-- Server version: 5.6.26
+-- PHP Version: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `canadian_university`
 --
 
-CREATE TABLE `canadian_university` (
+CREATE TABLE IF NOT EXISTS `canadian_university` (
   `id` int(7) NOT NULL,
   `chinese_name` varchar(80) CHARACTER SET utf8 NOT NULL,
   `english_name` varchar(80) CHARACTER SET utf8 NOT NULL,
@@ -253,7 +253,7 @@ INSERT INTO `canadian_university` (`id`, `chinese_name`, `english_name`, `if_uni
 -- Table structure for table `chinese_university`
 --
 
-CREATE TABLE `chinese_university` (
+CREATE TABLE IF NOT EXISTS `chinese_university` (
   `id` int(7) NOT NULL,
   `chinese_name` varchar(80) CHARACTER SET utf8 NOT NULL,
   `nineeightfive` tinyint(1) NOT NULL,
@@ -1472,7 +1472,7 @@ INSERT INTO `chinese_university` (`id`, `chinese_name`, `nineeightfive`, `twoone
 -- Table structure for table `news`
 --
 
-CREATE TABLE `news` (
+CREATE TABLE IF NOT EXISTS `news` (
   `id` int(7) NOT NULL,
   `news_date` date NOT NULL,
   `news_title` varchar(80) CHARACTER SET utf8 NOT NULL,
@@ -1499,7 +1499,7 @@ INSERT INTO `news` (`id`, `news_date`, `news_title`, `news_subtitle`, `news_cont
 -- Table structure for table `news_agent`
 --
 
-CREATE TABLE `news_agent` (
+CREATE TABLE IF NOT EXISTS `news_agent` (
   `id` int(7) NOT NULL,
   `news_date` date NOT NULL,
   `news_title` varchar(80) CHARACTER SET utf8 NOT NULL,
@@ -1521,7 +1521,7 @@ INSERT INTO `news_agent` (`id`, `news_date`, `news_title`, `news_subtitle`, `new
 -- Table structure for table `news_experience`
 --
 
-CREATE TABLE `news_experience` (
+CREATE TABLE IF NOT EXISTS `news_experience` (
   `id` int(7) NOT NULL,
   `news_date` date NOT NULL,
   `news_title` varchar(80) CHARACTER SET utf8 NOT NULL,
@@ -1545,7 +1545,7 @@ INSERT INTO `news_experience` (`id`, `news_date`, `news_title`, `news_subtitle`,
 -- Table structure for table `news_immigration`
 --
 
-CREATE TABLE `news_immigration` (
+CREATE TABLE IF NOT EXISTS `news_immigration` (
   `id` int(7) NOT NULL,
   `news_date` date NOT NULL,
   `news_title` varchar(80) CHARACTER SET utf8 NOT NULL,
@@ -1568,7 +1568,7 @@ INSERT INTO `news_immigration` (`id`, `news_date`, `news_title`, `news_subtitle`
 -- Table structure for table `news_program`
 --
 
-CREATE TABLE `news_program` (
+CREATE TABLE IF NOT EXISTS `news_program` (
   `id` int(7) NOT NULL,
   `news_date` date NOT NULL,
   `news_title` varchar(80) CHARACTER SET utf8 NOT NULL,
@@ -1591,7 +1591,7 @@ INSERT INTO `news_program` (`id`, `news_date`, `news_title`, `news_subtitle`, `n
 -- Table structure for table `news_university`
 --
 
-CREATE TABLE `news_university` (
+CREATE TABLE IF NOT EXISTS `news_university` (
   `id` int(7) NOT NULL,
   `news_date` date NOT NULL,
   `news_title` varchar(80) CHARACTER SET utf8 NOT NULL,
@@ -1613,7 +1613,7 @@ INSERT INTO `news_university` (`id`, `news_date`, `news_title`, `news_subtitle`,
 -- Table structure for table `news_visa`
 --
 
-CREATE TABLE `news_visa` (
+CREATE TABLE IF NOT EXISTS `news_visa` (
   `id` int(7) NOT NULL,
   `news_date` date NOT NULL,
   `news_title` varchar(80) CHARACTER SET utf8 NOT NULL,
@@ -1632,10 +1632,31 @@ INSERT INTO `news_visa` (`id`, `news_date`, `news_title`, `news_subtitle`, `news
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `test_all`
+--
+
+CREATE TABLE IF NOT EXISTS `test_all` (
+  `id` int(4) NOT NULL,
+  `name` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `description` varchar(80) CHARACTER SET utf8 NOT NULL,
+  `imageURL` varchar(60) NOT NULL,
+  `table name` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `test_all`
+--
+
+INSERT INTO `test_all` (`id`, `name`, `description`, `imageURL`, `table name`) VALUES
+(1, '微吧桌游', '仅售16.5元，价值38元的桌游套餐！不限时长！百花齐放/普洱茶/茉莉花茶/红茶4选1！享受美好时光！环境优美，朋友聚会首选！', 'image_1.jpg', 'test_instance_1');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `university`
 --
 
-CREATE TABLE `university` (
+CREATE TABLE IF NOT EXISTS `university` (
   `id` int(7) NOT NULL,
   `english_name` varchar(100) NOT NULL,
   `chinese_name` varchar(60) CHARACTER SET utf8 NOT NULL,
