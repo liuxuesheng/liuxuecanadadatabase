@@ -2,8 +2,8 @@
 -- version 4.5.0.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Dec 11, 2015 at 04:02 PM
+-- Host: 127.0.0.1
+-- Generation Time: Dec 14, 2015 at 05:00 AM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -1684,6 +1684,44 @@ CREATE TABLE `university` (
 INSERT INTO `university` (`id`, `english_name`, `chinese_name`, `existing_population`, `country_name`, `description`, `badge`) VALUES
 (101001, 'York University', '约克大学', 50000, '加拿大', '加拿大约克大学（York University）位于加拿大第一大城市多伦多北郊，是全加拿大综合规模第三大的大学。\r\n大学建立于1959 年，当时的约克大学被视作多伦多大学的分校只有76名学生，如今校园宽阔，共占地635 公顷，面积之大可以用“一望无际”来形容。学校设施全面，设有10个学院，24个研究中心，其学生数量超过5万人，教职员工也接近5000 人。\r\n一直以来约克大学以工商管理、法律、文科、计算机科学、社会科学等专业而闻名。其工商管理专业在伦敦《金融时报》排名中名列全加拿大第1名。在加拿大《麦克林》杂志2015年的大学排行榜上，约克大学位居综合类大学第8名。', ''),
 (101002, 'Lakehead University', '湖首大学', 16000, '加拿大', '湖首大学于1946年成立，位于安大略省的桑德贝市。学校靠近五大湖之一的苏必利尔湖。大学地处市中心，拥有良好的天然教育环境与天然实验室。', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `university_program`
+--
+
+CREATE TABLE `university_program` (
+  `id` int(10) NOT NULL,
+  `program_english_name` varchar(80) NOT NULL,
+  `program_chinese_name` varchar(80) NOT NULL,
+  `program_category` varchar(80) NOT NULL,
+  `MA` int(1) NOT NULL,
+  `MB` int(1) NOT NULL,
+  `GPA` float NOT NULL,
+  `IELTS` float NOT NULL,
+  `TOEFL` float NOT NULL,
+  `university_ID` int(7) NOT NULL,
+  `university_chinese_name` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `university_program`
+--
+
+INSERT INTO `university_program` (`id`, `program_english_name`, `program_chinese_name`, `program_category`, `MA`, `MB`, `GPA`, `IELTS`, `TOEFL`, `university_ID`, `university_chinese_name`) VALUES
+(2147483647, 'Computer Science', '计算机科学', '计算机与信息科学', 1, 1, 3.2, 6.5, 80, 9900103, '约克大学'),
+(2147483647, 'Computer Science', '计算机科学', '计算机与信息科学', 1, 1, 2.5, 6.5, 78, 9900114, '湖首大学'),
+(2147483647, 'Computer Science', '计算机科学', '计算机与信息科学', 1, 1, 3.2, 7, 85, 9900101, '多伦多大学'),
+(2147483647, 'Computer Science', '计算机科学', '计算机与信息科学', 1, 1, 3, 7, 80, 9900102, '滑铁卢大学'),
+(2147483647, 'Master of Business Administration', '工商管理硕士', '商业、管理与经济', 1, 0, 3.2, 6.5, 80, 9900103, '约克大学'),
+(2147483647, 'Master of Business Administration', '工商管理硕士', '商业、管理与经济', 1, 0, 2.5, 6.5, 78, 9900114, '湖首大学'),
+(2147483647, 'Master of Business Administration', '工商管理硕士', '商业、管理与经济', 1, 0, 3.2, 7.5, 90, 9900101, '多伦多大学'),
+(2147483647, 'Master of Business Administration', '工商管理硕士', '商业、管理与经济', 1, 0, 3, 7, 80, 9900102, '滑铁卢大学'),
+(2147483647, 'Physics', '物理学', '科学与应用科学', 1, 1, 3, 6.5, 80, 9900103, '约克大学'),
+(2147483647, 'Physics', '物理学', '科学与应用科学', 1, 1, 2.5, 6.5, 78, 9900114, '湖首大学'),
+(2147483647, 'Physics', '物理学', '科学与应用科学', 1, 1, 3.2, 6.5, 85, 9900101, '多伦多大学'),
+(2147483647, 'Physics', '物理学', '科学与应用科学', 1, 1, 3, 6.5, 80, 9900102, '滑铁卢大学');
 
 --
 -- Indexes for dumped tables
